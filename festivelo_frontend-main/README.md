@@ -1,18 +1,9 @@
 # Festivelo_frontend
 
 ## About
-아주대학교 소프트웨어학과 웹시스템설계 팀프로젝트 Team 4
-- **김평주**: frontend 개발
-- **조예진**: frontend 개발
-- 이나현: backend 개발
-- 김진영: backend 개발
+여행 계획 및 설계 도움 웹서비스
 
 ## Getting started
-1. Clone the repository
-```bash
-git clone https://git.ajou.ac.kr/festivelo/festivelo_frontend.git
-cd festivelo_frontend
-```
 
 2. Install dependencies
 ```bash
