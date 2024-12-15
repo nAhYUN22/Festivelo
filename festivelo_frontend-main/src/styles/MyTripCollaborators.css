@@ -1,0 +1,72 @@
+.collaborators-container {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.collaborators-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.collaborators-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.collaborators-title .icon {
+    color: #666;
+}
+
+.add-collaborator-btn {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 5px;
+}
+
+.collaborators-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.collaborator-item {
+    background-color: #f8f9fa;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    display: flex;
+    gap: 8px;
+}
+
+.collaborator-email {
+    color: #666;
+}
+
+.add-collaborator-form {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+}
+
+.add-collaborator-form input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.add-collaborator-form button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+} 

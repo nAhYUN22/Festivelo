@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Name</title>
+</head>
+<body>
+    <h2>이름 변경</h2>
+    <form id="name-change-form">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="text" id="new-name" placeholder="New Name" required>
+        <button type="submit">이름 변경</button>
+    </form>
+    <script>
+        document.getElementById('name-change-form').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const newName = document.getElementById('new-name').value;
+
+            try {
+                const response = await fetch('/conf_name/change', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, newName})
+                });
+
+                const data = await response.json();
+                alert(data.message);
+
+                if (response.ok) {
+                    location.href = '/dashboard'; // 변경 성공 시 대시보드로 이동
+                }
+            } catch (error) {
+                console.error('이름 변경 요청 중 오류:', error);
+                alert('이름 변경 중 오류가 발생했습니다.');
+            }
+        });
+    </script>
+</body>
+</html>

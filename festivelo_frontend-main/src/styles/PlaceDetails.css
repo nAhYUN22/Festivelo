@@ -1,0 +1,71 @@
+.place-detail h2 {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    word-break: keep-all;
+}
+
+.detail-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.detail-info {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.detail-info p {
+    display: flex;
+    align-items: flex-start;
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    word-break: keep-all;
+}
+
+.icon {
+    margin-right: 8px;
+    min-width: 16px;
+    margin-top: 4px;
+    color: var(--primary-color);
+}
+
+.detail-info p strong {
+    margin-right: 8px;
+    white-space: nowrap;
+}
+
+.detail-info p span {
+    flex: 1;
+    word-break: break-all;
+}
+
+.location,
+.tel,
+.distance,
+.restdate,
+.usetime,
+.parking,
+.eventstartdate,
+.sponsor1,
+.usetimefestival {
+    font-size: 16px;
+    width: 100%;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+@media screen and (max-width: 480px) {
+    .detail-info p {
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+    
+    .detail-info p strong {
+        min-width: 60px;
+    }
+}

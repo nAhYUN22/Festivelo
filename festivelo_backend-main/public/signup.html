@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+</head>
+<body>
+    <h2>일반 회원가입</h2>
+    <form id="signup-form">
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <input type="text" id="name" placeholder="Name" required>
+        <button type="submit">회원가입</button>
+    </form>
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const name = document.getElementById('name').value;
+
+            const response = await fetch('/signup', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password, name })
+            });
+
+            const data = await response.json();
+            alert(data.message);
+            if (data.message === '회원가입 성공') {
+                // 로그인 성공 시 홈 화면으로 이동
+                location.href = '/';
+            }
+        });
+    </script>
+</body>
+</html>

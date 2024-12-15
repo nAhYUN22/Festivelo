@@ -1,0 +1,69 @@
+:root {
+    --primary-color: #2d46c3;
+    --primary-variant-color: #001c98;
+    --primary-sky-color: #8a9dff;
+    --primary-light-color: #e8eaf9;
+    --complementary-color: #c3aa2d;
+    --secondary-color: #6c757d;
+    --almost-black-color: #2c3e50;
+    --almost-white-color: #f8f9fa;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--primary-light-color);
+}
+
+.festivelo-logo {
+    color: var(--primary-color);
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-size: 1.6rem;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #333;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 10px;
+}
+
+.next-button,
+.back-button,
+.submit-button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.next-button,
+.submit-button {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.back-button {
+    background-color: var(--almost-white-color);
+    color: #333;
+}
+
+.next-button:hover,
+.submit-button:hover {
+    background-color: var(--primary-variant-color);
+}
+
+.back-button:hover {
+    background-color: var(--almost-white-color);
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #666;
+    cursor: pointer;
+}

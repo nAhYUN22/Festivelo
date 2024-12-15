@@ -1,0 +1,119 @@
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: #fbfbfb;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    transition: all 0.3s ease-in-out;
+    gap: 0;
+}
+
+.sidebar {
+    z-index: 9;
+    width: 20rem;
+    margin: 1rem 0.5rem;
+    flex-shrink: 0;
+    transition: all 0.3s ease-in-out;
+    border-radius: 1rem;
+    border-color: #bababa;
+    border-width: 1px;
+    border-style: solid;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    overflow-y: auto;
+}
+
+.sidebar .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 2.5rem;
+    height: 2.5rem;
+}
+
+.sidebar .header-container .header-profile-button, .header-back-button {
+    background: none;
+    border: none;
+    color: #777;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+    padding: 0;
+}
+
+.sidebar .header-container .header-profile-button:hover, .header-back-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    z-index: 9;
+    width: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    margin: 0;
+    border-radius: 1rem;
+    border-color: #bababa;
+    border-width: 1px;
+    border-style: solid;
+    background-color: white;
+    padding: 0;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+.wrapper.show-content .content {
+    width: 20rem;
+    margin: 1rem 0.5rem;
+    opacity: 1;
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+.wrapper.full-content .content {
+    opacity: 1;
+    width: 80rem;
+    margin: 1rem 0.5rem;
+    padding: 20px;
+    flex: 1;
+}
+
+.map-container {
+    position: relative;
+    border-radius: 1rem;
+    border-color: #bababa;
+    border-width: 1px;
+    border-style: solid;
+    background-color: white;
+    overflow: hidden;
+    flex: 1;
+    margin: 1rem 0.5rem;
+    z-index: 1;
+    width: 20rem;
+    transition: width 0.3s ease-in-out;
+}
+
+.map-container.hidden {
+    width: 0;
+    display: none;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}

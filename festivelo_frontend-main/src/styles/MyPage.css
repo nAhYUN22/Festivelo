@@ -1,0 +1,295 @@
+.mypage {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.mypage-container {
+    display: flex;
+    width: 960px;
+    height: 600px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    border-radius: 1rem;
+    border-color: #bababa;
+    border-width: 1px;
+    border-style: solid;
+    background-color: white;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.mypage-sidebar {
+    width: 16rem;
+    background-color: white;
+    padding: 20px;
+    border-right: solid 1px #ddd;
+}
+
+.profile-summary {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--primary-light-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    margin: 0 auto 1rem;
+}
+
+.profile-summary h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.mypage-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-button {
+    width: 100%;
+    padding: 12px;
+    text-align: left;
+    background: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.nav-button:hover {
+    background-color: #f0f0f0;
+}
+
+.nav-button.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.nav-button.logout {
+    margin-top: auto;
+    color: #dc3545;
+}
+
+.nav-button.logout:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+.mypage-content {
+    flex: 1;
+    padding: 20px;
+    margin: 20px;
+}
+
+.profile-section h2,
+.favorites-section h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 1.8rem;
+}
+
+.password-section {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.password-section h3 {
+    color: #555;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.password-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.password-form label {
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.password-form input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.password-form input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 3px rgba(0, 123, 255, 0.4);
+}
+
+.change-password-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 14px 20px;
+    margin: 4px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.change-password-button:hover {
+    opacity: 0.8;
+}
+
+.change-password-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.favorites-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.review-item {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.review-item h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.rating {
+    color: #f8b400;
+    margin-bottom: 8px;
+}
+
+.review-date {
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 8px;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-btn {
+    padding: 5px 10px;
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #cc0000;
+}
+
+.profile-info {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.name-section {
+    margin-bottom: 20px;
+}
+
+.name-edit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.name-edit input {
+    width: 80%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.name-edit button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    background-color: var(--primary-color);
+    color: white;
+    transition: all 0.2s ease;
+    margin: 0 5px;
+}
+
+.name-edit button:last-child {
+    background-color: #6c757d;
+}
+
+.name-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.name-display h3 {
+    margin: 0;
+    text-align: center;
+}
+
+.edit-icon {
+    cursor: pointer;
+    color: #666;
+    font-size: 0.9rem;
+    padding: 5px;
+    transition: all 0.2s ease;
+}
+
+.edit-icon:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
